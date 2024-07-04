@@ -280,6 +280,9 @@
         <Class IRI="#Tensorflow_Playground"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Test"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Time_Series_Forecasting"/>
     </Declaration>
     <Declaration>
