@@ -5,8 +5,10 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/alelo/ontologies/2024/5/untitled-ontology-8">
+     ontologyIRI="http://www.semanticweb.org/alelo/ontologies/2024/5/untitled-ontology-8"
+     versionIRI="http://www.semanticweb.org/alelo/ontologies/2024/5/milto">
     <Prefix name="" IRI="http://www.semanticweb.org/alelo/ontologies/2024/5/untitled-ontology-8/"/>
+    <Prefix name="g" IRI="http://www.semanticweb.org/alelo/ontologies/2024/5/untitled-ontology-8/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -25,6 +27,18 @@
         <Class IRI="#Activation_Function"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Algorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Build_failure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Categories_of_Symptoms"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Colab"/>
     </Declaration>
     <Declaration>
@@ -34,13 +48,28 @@
         <Class IRI="#Computation_Graph"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Concurrency"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Contrib_Directory"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Contribution"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Conﬁguration_error"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Corner_Case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crash"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Dataset_Tensorflow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dimension_Mismatch"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Directory_API"/>
@@ -55,10 +84,16 @@
         <Class IRI="#Ecosystem"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Failure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Fairness_Indicators"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Framework"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Functional_error"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GPU_Usage"/>
@@ -67,10 +102,16 @@
         <Class IRI="#Google_Cloud_Public_Datasets"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Hang"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Hyperparameters"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Image_Classification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inconsistency"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Kaagle_Datasets"/>
@@ -100,6 +141,9 @@
         <Class IRI="#Library"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Logic_error"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Loss_Function"/>
     </Declaration>
     <Declaration>
@@ -110,6 +154,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ML_Perf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Memory"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Missing_Preprocessing"/>
@@ -142,6 +189,9 @@
         <Class IRI="#Optimizer"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Performance_degradation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Platform"/>
     </Declaration>
     <Declaration>
@@ -151,10 +201,16 @@
         <Class IRI="#Preprocessing_of_Trainning_Data"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Processing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Recommendation_systems"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Recommender_System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Referenced_types_error"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Resources"/>
@@ -304,6 +360,9 @@
         <Class IRI="#Trainning_Process"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Type_Confusion"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Version"/>
     </Declaration>
     <Declaration>
@@ -311,6 +370,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Visual_Block"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Warning-style_error"/>
     </Declaration>
     <Declaration>
         <Class IRI="#What_If"/>
@@ -443,6 +505,22 @@
         <Class IRI="#Layers"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Algorithm"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Build_failure"/>
+        <Class IRI="#Categories_of_Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Categories_of_Root_Causes"/>
+        <Class IRI="#Failure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Categories_of_Symptoms"/>
+        <Class IRI="#Failure"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Colab"/>
         <Class IRI="#Tools"/>
     </SubClassOf>
@@ -455,6 +533,10 @@
         <Class IRI="#Components"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Concurrency"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Contrib_Directory"/>
         <Class IRI="#Contribution"/>
     </SubClassOf>
@@ -463,8 +545,24 @@
         <Class IRI="#Components"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Conﬁguration_error"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Corner_Case"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crash"/>
+        <Class IRI="#Categories_of_Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Dataset_Tensorflow"/>
         <Class IRI="#Resources"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dimension_Mismatch"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Directory_API"/>
@@ -483,6 +581,10 @@
         <Class IRI="#Tensorflow"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Failure"/>
+        <Class IRI="#Tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Fairness_Indicators"/>
         <Class IRI="#Libraries_&amp;_Extensions"/>
     </SubClassOf>
@@ -491,8 +593,20 @@
         <Class IRI="#Components"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Functional_error"/>
+        <Class IRI="#Categories_of_Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GPU_Usage"/>
+        <Class IRI="#Failure"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Google_Cloud_Public_Datasets"/>
         <Class IRI="#Dataset_Tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hang"/>
+        <Class IRI="#Categories_of_Symptoms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hyperparameters"/>
@@ -501,6 +615,10 @@
     <SubClassOf>
         <Class IRI="#Image_Classification"/>
         <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inconsistency"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Kaagle_Datasets"/>
@@ -539,6 +657,10 @@
         <Class IRI="#Components"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Logic_error"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Loss_Function"/>
         <Class IRI="#Trainning"/>
     </SubClassOf>
@@ -555,8 +677,16 @@
         <Class IRI="#Tools"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Memory"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Missing_Preprocessing"/>
         <Class IRI="#Preprocessing_of_Trainning_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <Class IRI="#Failure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Model_Card_Toolkit"/>
@@ -591,6 +721,10 @@
         <Class IRI="#Trainning"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Performance_degradation"/>
+        <Class IRI="#Categories_of_Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Platform"/>
         <Class IRI="#Components"/>
     </SubClassOf>
@@ -603,12 +737,20 @@
         <Class IRI="#Trainning"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Processing"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Recommendation_systems"/>
         <Class IRI="#Ecosystem"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Recommender_System"/>
         <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Referenced_types_error"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Resources"/>
@@ -787,12 +929,20 @@
         <Class IRI="#Ecosystem"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Trainning"/>
+        <Class IRI="#Failure"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Trainning_Data"/>
         <Class IRI="#Trainning"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Trainning_Process"/>
         <Class IRI="#Trainning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type_Confusion"/>
+        <Class IRI="#Categories_of_Root_Causes"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Version"/>
@@ -805,6 +955,10 @@
     <SubClassOf>
         <Class IRI="#Visual_Block"/>
         <Class IRI="#Tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Warning-style_error"/>
+        <Class IRI="#Categories_of_Symptoms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#What_If"/>
@@ -879,6 +1033,10 @@
         <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Tensors_&amp;_Inputs"/>
+        <Class IRI="#Failure"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Validation/Testing"/>
         <Class IRI="#Trainning"/>
     </SubClassOf>
@@ -900,7 +1058,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#core/example"/>
-        <Class IRI="#Documentation"/>
+        <Class IRI="#Kernel_Directory"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#core/framework"/>
