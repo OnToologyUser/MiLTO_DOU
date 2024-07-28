@@ -5,7 +5,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.org/milto/onto">
+     ontologyIRI="http://purl.org/milto/onto"
+     versionIRI="http://purl.org/milto/onto/6.0.0">
     <Prefix name="" IRI="http://purl.org/milto/onto/"/>
     <Prefix name="dc" IRI="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -62,10 +63,16 @@
         <Class IRI="/API_Libraries"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/API_python"/>
+        <Class IRI="/API_c"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Acronym"/>
+        <Class IRI="/API_cc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/API_java"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/API_python"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Activation_Function"/>
@@ -75,6 +82,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/Build_failure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CPU"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Categories_of_Root_Causes"/>
@@ -141,6 +151,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/Functional_error"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/GPU"/>
     </Declaration>
     <Declaration>
         <Class IRI="/GPU_Usage"/>
@@ -242,9 +255,6 @@
         <Class IRI="/Platform"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Platform_Directory"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/Preprocessing_of_Trainning_Data"/>
     </Declaration>
     <Declaration>
@@ -269,10 +279,10 @@
         <Class IRI="/Runtime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Sonnet"/>
+        <Class IRI="/SUT"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/System_Under_Test"/>
+        <Class IRI="/Sonnet"/>
     </Declaration>
     <Declaration>
         <Class IRI="/TFX"/>
@@ -395,9 +405,6 @@
         <Class IRI="/Tool"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Tool_Directory"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/Tools"/>
     </Declaration>
     <Declaration>
@@ -452,34 +459,61 @@
         <Class IRI="/acro_API"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/acro_SUT"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/c"/>
     </Declaration>
     <Declaration>
         <Class IRI="/cc"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/contrib"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/core"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core_API"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core_kernel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core_lib"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core_tpu"/>
     </Declaration>
     <Declaration>
         <Class IRI="/core_util"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/debug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/example"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/examples"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/exemples"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/file"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/git"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/java"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/kernels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/lib"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/logging"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/memory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/pip_package"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/profile"/>
     </Declaration>
     <Declaration>
         <Class IRI="/python"/>
@@ -488,13 +522,19 @@
         <Class IRI="/root"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/seq2seq"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/third-party"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/tools_git"/>
+        <Class IRI="/tools"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/tools_pippackage"/>
+        <Class IRI="/tpu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/util"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Libraries_&amp;_Extensions"/>
@@ -539,13 +579,13 @@
         <Class IRI="/core/ops"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/core/platform"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/core/profile"/>
     </Declaration>
     <Declaration>
         <Class IRI="/core/protobuf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/stored_In"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -572,17 +612,33 @@
         <Class IRI="/API"/>
         <Class IRI="/acro_API"/>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/SUT"/>
+        <Class IRI="/acro_SUT"/>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="/API"/>
         <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/API_Libraries"/>
-        <Class IRI="/Library"/>
+        <Class IRI="/API"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/API_c"/>
+        <Class IRI="/API"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/API_cc"/>
+        <Class IRI="/API"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/API_java"/>
+        <Class IRI="/API"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/API_python"/>
-        <Class IRI="/python"/>
+        <Class IRI="/API"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Activation_Function"/>
@@ -595,6 +651,10 @@
     <SubClassOf>
         <Class IRI="/Build_failure"/>
         <Class IRI="/Categories_of_Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CPU"/>
+        <Class IRI="/Platform"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Categories_of_Root_Causes"/>
@@ -650,7 +710,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Directory_API"/>
-        <Class IRI="/API_Libraries"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Diretory"/>
@@ -679,6 +739,10 @@
     <SubClassOf>
         <Class IRI="/Functional_error"/>
         <Class IRI="/Categories_of_Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/GPU"/>
+        <Class IRI="/Platform"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/GPU_Usage"/>
@@ -811,10 +875,6 @@
     <SubClassOf>
         <Class IRI="/Platform"/>
         <Class IRI="/Components"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Platform_Directory"/>
-        <Class IRI="/Platform"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Preprocessing_of_Trainning_Data"/>
@@ -1005,10 +1065,6 @@
         <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/Tool_Directory"/>
-        <Class IRI="/Tool"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/Tools"/>
         <Class IRI="/Ecosystem"/>
     </SubClassOf>
@@ -1078,67 +1134,107 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/acro_API"/>
-        <Class IRI="/Acronym"/>
+        <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/c"/>
-        <Class IRI="/core_API"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/cc"/>
-        <Class IRI="/core_API"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/contrib"/>
+        <Class IRI="/Diretory"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core"/>
         <Class IRI="/Diretory"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/core_API"/>
+        <Class IRI="/core_util"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/core_kernel"/>
-        <Class IRI="/Kernel"/>
+        <Class IRI="/debug"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/core_lib"/>
-        <Class IRI="/Directory_API"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core_tpu"/>
-        <Class IRI="/Platform_Directory"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core_util"/>
-        <Class IRI="/Directory_API"/>
+        <Class IRI="/example"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/examples"/>
         <Class IRI="/Documentation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/exemples"/>
+        <Class IRI="/Components"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/file"/>
+        <Class IRI="/Framework"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/git"/>
+        <Class IRI="/tools"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/java"/>
-        <Class IRI="/core_API"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/kernels"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/lib"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/logging"/>
+        <Class IRI="/Framework"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/memory"/>
+        <Class IRI="/Framework"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/pip_package"/>
+        <Class IRI="/tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/profile"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/python"/>
-        <Class IRI="/core_API"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/root"/>
-        <Class IRI="/Directory_API"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/seq2seq"/>
+        <Class IRI="/contrib"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/third-party"/>
-        <Class IRI="/Directory_API"/>
+        <Class IRI="/Diretory"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/tools_git"/>
-        <Class IRI="/Tool_Directory"/>
+        <Class IRI="/tools"/>
+        <Class IRI="/Diretory"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/tools_pippackage"/>
-        <Class IRI="/Tool_Directory"/>
+        <Class IRI="/tpu"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/util"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Libraries_&amp;_Extensions"/>
@@ -1162,51 +1258,47 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/common_runtime"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/debug"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/distributed_runtime"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/example"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/framework"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/graph"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/grappler"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/kernels"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/ops"/>
-        <Class IRI="/core_kernel"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/platform"/>
-        <Class IRI="/Platform_Directory"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/profile"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/protobuf"/>
-        <Class IRI="/core_kernel"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="/c"/>
@@ -1214,10 +1306,25 @@
         <Class IRI="/java"/>
         <Class IRI="/python"/>
     </DisjointClasses>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/stored_In"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/stored_In"/>
+        <Class IRI="/Components"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/stored_In"/>
+        <Class IRI="/Diretory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="/Diretory"/>
+    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/API</IRI>
-        <Literal xml:lang="en">API Acronym for Application Programming Interface. API&apos;s . The API&apos;s function is to link between different applications serving the user. They enable integration between different systems and make user actions faster with the expected responses. The API always works in the background, so the average user does not even see the API in operation. TensorFlow provides APIs in many programming languages as C, C++, Java, and Python, which one are located in the python, c, cc and java directories.</Literal>
+        <Literal xml:lang="en">API&apos;s . The API&apos;s function is to link between different applications serving the user. They enable integration between different systems and make user actions faster with the expected responses. The API always works in the background, so the average user does not even see the API in operation. TensorFlow provides APIs in many programming languages as C, C++, Java, and Python, which one are located in the python, c, cc and java directories.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1241,6 +1348,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SUT</IRI>
+        <Literal xml:lang="en">Refers to a system that is being tested for correct operation. According to ISTQB it is the test object. From a unit testing perspective, the system under test represents all of the classes in a test that are not predefined pieces of code like stubs or even mocks.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/TensorFlow</IRI>
         <Literal>&quot;TensorFlow is an open-source platform developed by Google for the purpose of machine learning and deep learning. It is widely used to develop and train machine learning models.&quot;</Literal>
     </AnnotationAssertion>
@@ -1261,6 +1373,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/acro_SUT</IRI>
+        <Literal xml:lang="en">SUT - System  Under Test</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/c</IRI>
         <Literal>The directory where the TensorFlow API C source code is located.</Literal>
     </AnnotationAssertion>
@@ -1278,6 +1395,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/python</IRI>
         <Literal>The directory where the TensorFlow API Python source code is located.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/stored_In</IRI>
+        <Literal xml:lang="en">Object is stored in another Object.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
