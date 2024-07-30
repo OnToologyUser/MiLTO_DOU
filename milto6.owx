@@ -54,8 +54,41 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5.1</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">6.0</Literal>
     </Annotation>
+    <Declaration>
+        <Class IRI="#distribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#docs_src"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dtensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#examples"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#go"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#java"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#js"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#lite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#python"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#security"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tools"/>
+    </Declaration>
     <Declaration>
         <Class IRI="/API"/>
     </Declaration>
@@ -139,6 +172,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/Ecosystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/FP16"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Failure"/>
@@ -456,16 +492,49 @@
         <Class IRI="/XLA"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/absl"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/acro_API"/>
     </Declaration>
     <Declaration>
         <Class IRI="/acro_SUT"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/activity_watcher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/android"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/api_def"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/benchmark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/boringssl"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/c"/>
     </Declaration>
     <Declaration>
         <Class IRI="/cc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ci"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/clang_toolchain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/compiler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/compute_library"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/config"/>
     </Declaration>
     <Declaration>
         <Class IRI="/contrib"/>
@@ -477,7 +546,16 @@
         <Class IRI="/core_util"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/debug"/>
+        <Class IRI="/data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/dlpack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ducc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/eigen3"/>
     </Declaration>
     <Declaration>
         <Class IRI="/example"/>
@@ -489,19 +567,76 @@
         <Class IRI="/exemples"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/farmhash"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/fft2d"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/file"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/git"/>
+        <Class IRI="/flatbuffers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/gemmlowp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/gloo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/googleapis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/gpus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/grpc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/hexagon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/highwayhash"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/hwloc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/icu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/implib_so"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ir"/>
     </Declaration>
     <Declaration>
         <Class IRI="/java"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/jpeg"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/kernels"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/kissfft"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/lib"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/libprotobuf_mutator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/llvm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/llvm_openmp"/>
     </Declaration>
     <Declaration>
         <Class IRI="/logging"/>
@@ -510,19 +645,118 @@
         <Class IRI="/memory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/pip_package"/>
+        <Class IRI="/mkl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/mkl_dnn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/mpi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/mpitrampoline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/nanobind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/nasm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/nccl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/nvtx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/opencl_headers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ops"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ortools"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/pasta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/platform"/>
     </Declaration>
     <Declaration>
         <Class IRI="/profile"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/profiler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/protobuf_tp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/public"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/py"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/pybind11_abseil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/pybind11_bazel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/pybind11_protobuf"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/python"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/python_runtime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/remote_config"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/robin_map"/>
     </Declaration>
     <Declaration>
         <Class IRI="/root"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/runtime_fallback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ruy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/seq2seq"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/shardy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/sobol_data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/stablehlo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/summary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/systemlibs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tensorflow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tensorrt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tf_runtime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tfrt"/>
     </Declaration>
     <Declaration>
         <Class IRI="/third-party"/>
@@ -534,7 +768,22 @@
         <Class IRI="/tpu"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/transforms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/triton"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/user_ops"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/util"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/vulkan_headers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/xla"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Libraries_&amp;_Extensions"/>
@@ -571,9 +820,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/core/grappler"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/kernels"/>
     </Declaration>
     <Declaration>
         <Class IRI="/core/ops"/>
@@ -616,6 +862,50 @@
         <Class IRI="/SUT"/>
         <Class IRI="/acro_SUT"/>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#distribute"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#docs_src"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dtensor"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#examples"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#go"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#java"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#js"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#lite"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#python"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#security"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#tools"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="/API"/>
         <Class IRI="/Components"/>
@@ -727,6 +1017,10 @@
     <SubClassOf>
         <Class IRI="/Ecosystem"/>
         <Class IRI="/TensorFlow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FP16"/>
+        <Class IRI="/third-party"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Fairness_Indicators"/>
@@ -1133,15 +1427,59 @@
         <Class IRI="/Tools"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/absl"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/acro_API"/>
         <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/c"/>
+        <Class IRI="/activity_watcher"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/android"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/api_def"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/benchmark"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/boringssl"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/c"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/cc"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ci"/>
+        <Class IRI="/Diretory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/clang_toolchain"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/compiler"/>
+        <Class IRI="/tensorflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/compute_library"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/config"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
@@ -1150,15 +1488,27 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core"/>
-        <Class IRI="/Diretory"/>
+        <Class IRI="/tensorflow"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core_util"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/debug"/>
+        <Class IRI="/data"/>
         <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/dlpack"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ducc"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/eigen3"/>
+        <Class IRI="/third-party"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/example"/>
@@ -1173,24 +1523,100 @@
         <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/farmhash"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/fft2d"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/file"/>
         <Class IRI="/Framework"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/git"/>
-        <Class IRI="/tools"/>
+        <Class IRI="/flatbuffers"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/function"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/gemmlowp"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/gloo"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/googleapis"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/gpus"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/grpc"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/hexagon"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/highwayhash"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/hwloc"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/icu"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/implib_so"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ir"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/java"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/jpeg"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/kernels"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/kissfft"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/lib"/>
         <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/libprotobuf_mutator"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/llvm"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/llvm_openmp"/>
+        <Class IRI="/third-party"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/logging"/>
@@ -1201,24 +1627,156 @@
         <Class IRI="/Framework"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/pip_package"/>
-        <Class IRI="/tools"/>
+        <Class IRI="/mkl"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/mkl_dnn"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/mpi"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/mpitrampoline"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/nanobind"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/nasm"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/nccl"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/nvtx"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/opencl_headers"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ops"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ortools"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/pasta"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/platform"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/profile"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/profiler"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/protobuf_tp"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/public"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/py"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/pybind11_abseil"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/pybind11_bazel"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/pybind11_protobuf"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/python"/>
         <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/python_runtime"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/remote_config"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/robin_map"/>
+        <Class IRI="/third-party"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/root"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/runtime_fallback"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ruy"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/seq2seq"/>
         <Class IRI="/contrib"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/shardy"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/sobol_data"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/stablehlo"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/summary"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/systemlibs"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tensorflow"/>
+        <Class IRI="/Diretory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tensorrt"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tf_runtime"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tfrt"/>
+        <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/third-party"/>
@@ -1233,8 +1791,28 @@
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/transforms"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/triton"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/user_ops"/>
+        <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/util"/>
         <Class IRI="/core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/vulkan_headers"/>
+        <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/xla"/>
+        <Class IRI="/third-party"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Libraries_&amp;_Extensions"/>
@@ -1282,10 +1860,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/core/grappler"/>
-        <Class IRI="/core"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/kernels"/>
         <Class IRI="/core"/>
     </SubClassOf>
     <SubClassOf>
