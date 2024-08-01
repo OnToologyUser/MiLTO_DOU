@@ -7,7 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/milto/onto"
      versionIRI="http://purl.org/milto/onto/6.0.0">
-    <Prefix name="" IRI="http://purl.org/milto/onto/"/>
+    <Prefix name="" IRI="http://purl.org/milto/onto#"/>
     <Prefix name="dc" IRI="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -831,7 +831,37 @@
         <Class IRI="/core/protobuf"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl/layers"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/stored_In"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/active_Is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/number_Of_Layers_Has"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#codeAPIc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/c"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/codeAPIcc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/codeAPIjava"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/java"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -919,8 +949,22 @@
         <Class IRI="/API"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/API_c"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/stored_In"/>
+            <Class IRI="/c"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/API_cc"/>
         <Class IRI="/API"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/API_cc"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/stored_In"/>
+            <Class IRI="/cc"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/API_java"/>
@@ -929,6 +973,13 @@
     <SubClassOf>
         <Class IRI="/API_python"/>
         <Class IRI="/API"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/API_python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/stored_In"/>
+            <Class IRI="/python"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Activation_Function"/>
@@ -1037,6 +1088,13 @@
     <SubClassOf>
         <Class IRI="/GPU"/>
         <Class IRI="/Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/GPU"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/stored_In"/>
+            <Class IRI="/java"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/GPU_Usage"/>
@@ -1874,18 +1932,77 @@
         <Class IRI="/core/protobuf"/>
         <Class IRI="/core"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl/layers"/>
+        <Class IRI="/SUT"/>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="/c"/>
         <Class IRI="/cc"/>
         <Class IRI="/java"/>
         <Class IRI="/python"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="/API_c"/>
+        <NamedIndividual IRI="#codeAPIc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/API_cc"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/codeAPIcc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/API_java"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/codeAPIjava"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#java"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/java"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/stored_In"/>
+        <NamedIndividual IRI="#codeAPIc"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/c"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/stored_In"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/codeAPIcc"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/cc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/stored_In"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/java"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/java"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/active_Is"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/active_Is"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
+    </FunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="/stored_In"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/stored_In"/>
         <Class IRI="/Components"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
+            <Class IRI="/Components"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/number_Of_Layers_Has"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/number_Of_Layers_Has"/>
+            <Class IRI="http://www.co-ode.org/ontologies/ont.owl/layers"/>
+        </ObjectMinCardinality>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/stored_In"/>
@@ -1895,6 +2012,11 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
         <Class IRI="/Diretory"/>
     </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#codeAPIc</IRI>
+        <Literal xml:lang="en">Source code implemented for the c API functionality and stored in the directory c.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/API</IRI>
