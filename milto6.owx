@@ -93,6 +93,9 @@
         <Class IRI="/API"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/API_Deep_Learning"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/API_Libraries"/>
     </Declaration>
     <Declaration>
@@ -495,12 +498,6 @@
         <Class IRI="/absl"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/acro_API"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/acro_SUT"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/activity_watcher"/>
     </Declaration>
     <Declaration>
@@ -753,6 +750,24 @@
         <Class IRI="/tensorrt"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/tf.data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tf.estimador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tf.feuture_column"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tf.io"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tf.keras"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/tf.queue"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/tf_runtime"/>
     </Declaration>
     <Declaration>
@@ -784,6 +799,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/xla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/API_I/API_I/API_IO_and_Preprocessing"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Libraries_&amp;_Extensions"/>
@@ -831,9 +849,6 @@
         <Class IRI="/core/protobuf"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl/layers"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/stored_In"/>
     </Declaration>
     <Declaration>
@@ -844,6 +859,30 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/number_Of_Layers_Has"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/abbreviation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/gpuTypes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hardwareType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/neuronsNumberPerLayer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/numberOfDevice"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/numberOfLayers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/setting"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/taskPerformed"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#codeAPIc"/>
@@ -886,11 +925,17 @@
     </Declaration>
     <EquivalentClasses>
         <Class IRI="/API"/>
-        <Class IRI="/acro_API"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/abbreviation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="/SUT"/>
-        <Class IRI="/acro_SUT"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/abbreviation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#distribute"/>
@@ -941,6 +986,10 @@
         <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/API_Deep_Learning"/>
+        <Class IRI="/API"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/API_Libraries"/>
         <Class IRI="/API"/>
     </SubClassOf>
@@ -971,15 +1020,22 @@
         <Class IRI="/API"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/API_java"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/stored_In"/>
+            <Class IRI="#java"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/API_python"/>
         <Class IRI="/API"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/API_python"/>
-        <ObjectSomeValuesFrom>
+        <ObjectAllValuesFrom>
             <ObjectProperty IRI="/stored_In"/>
             <Class IRI="/python"/>
-        </ObjectSomeValuesFrom>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Activation_Function"/>
@@ -1285,6 +1341,20 @@
         <Class IRI="/Tools"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/TensorFlow"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="/neuronsNumberPerLayer"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TensorFlow"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="/numberOfLayers"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/TensorFlow.js"/>
         <Class IRI="/Libraries_&amp;_Extensions"/>
     </SubClassOf>
@@ -1487,10 +1557,6 @@
     <SubClassOf>
         <Class IRI="/absl"/>
         <Class IRI="/third-party"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/acro_API"/>
-        <Class IRI="/Components"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/activity_watcher"/>
@@ -1829,6 +1895,30 @@
         <Class IRI="/third-party"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/tf.data"/>
+        <Class IRI="/API_I/API_I/API_IO_and_Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tf.estimador"/>
+        <Class IRI="/API_Deep_Learning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tf.feuture_column"/>
+        <Class IRI="/API_Deep_Learning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tf.io"/>
+        <Class IRI="/API_I/API_I/API_IO_and_Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tf.keras"/>
+        <Class IRI="/API_Deep_Learning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/tf.queue"/>
+        <Class IRI="/API_I/API_I/API_IO_and_Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/tf_runtime"/>
         <Class IRI="/third-party"/>
     </SubClassOf>
@@ -1871,6 +1961,10 @@
     <SubClassOf>
         <Class IRI="/xla"/>
         <Class IRI="/third-party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/API_I/API_I/API_IO_and_Preprocessing"/>
+        <Class IRI="/API"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Libraries_&amp;_Extensions"/>
@@ -1932,10 +2026,6 @@
         <Class IRI="/core/protobuf"/>
         <Class IRI="/core"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl/layers"/>
-        <Class IRI="/SUT"/>
-    </SubClassOf>
     <DisjointClasses>
         <Class IRI="/c"/>
         <Class IRI="/cc"/>
@@ -1973,10 +2063,6 @@
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/java"/>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/java"/>
     </ObjectPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/active_Is"/>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
-    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/active_Is"/>
     </FunctionalObjectProperty>
@@ -1990,20 +2076,6 @@
         <ObjectProperty IRI="/stored_In"/>
         <Class IRI="/Components"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
-            <Class IRI="/Components"/>
-        </ObjectSomeValuesFrom>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/number_Of_Layers_Has"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/number_Of_Layers_Has"/>
-            <Class IRI="http://www.co-ode.org/ontologies/ont.owl/layers"/>
-        </ObjectMinCardinality>
-    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/stored_In"/>
         <Class IRI="/Diretory"/>
@@ -2012,6 +2084,99 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
         <Class IRI="/Diretory"/>
     </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/active_Is"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl/deprecated_Is"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/gpuTypes"/>
+        <DataProperty IRI="/setting"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/hardwareType"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/neuronsNumberPerLayer"/>
+        <DataProperty IRI="/setting"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/numberOfLayers"/>
+        <DataProperty IRI="/setting"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/taskPerformed"/>
+        <DataProperty IRI="/gpuTypes"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/abbreviation"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/gpuTypes"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/neuronsNumberPerLayer"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/numberOfLayers"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/taskPerformed"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="/abbreviation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/abbreviation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/gpuTypes"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/gpuTypes"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/neuronsNumberPerLayer"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="/neuronsNumberPerLayer"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/numberOfDevice"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="/numberOfDevice"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/numberOfLayers"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="/numberOfLayers"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/taskPerformed"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/taskPerformed"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/abbreviation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/neuronsNumberPerLayer"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/numberOfDevice"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#codeAPIc</IRI>
@@ -2020,7 +2185,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/API</IRI>
-        <Literal xml:lang="en">API&apos;s . The API&apos;s function is to link between different applications serving the user. They enable integration between different systems and make user actions faster with the expected responses. The API always works in the background, so the average user does not even see the API in operation. TensorFlow provides APIs in many programming languages as C, C++, Java, and Python, which one are located in the python, c, cc and java directories.</Literal>
+        <Literal xml:lang="en">API&apos;s. The API&apos;s function is to link between different applications serving the user. They enable the integration of different systems and accelerate user actions with expected responses. The API always works in the background, so the average user does not even see it in operation. TensorFlow offers APIs in various programming languages, including C, C++, Java, and Python. These APIs are located in the Python, C, CCC, and Java directories.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2031,6 +2196,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Computation_Graph</IRI>
         <Literal>TensorFlow uses compute graphs to define and manage its tasks. The graph implements the definition, construction, partition, optimization, operation, and execution of calculations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Diretory</IRI>
+        <Literal xml:lang="en">It is a file system cataloging structure that contains references to other computer files and, possibly, other directories. On numerous computing devices, directories are commonly referred to as folders or drawers.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2063,29 +2233,49 @@
         <Literal>Applications that support and accelerate TensorFlow workflows.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/acro_API</IRI>
-        <Literal xml:lang="en">API - Application Programming Interface.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/abbreviation</IRI>
+        <Literal xml:lang="en"></Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/acro_SUT</IRI>
-        <Literal xml:lang="en">SUT - System  Under Test</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/abbreviation</IRI>
+        <Literal>A short form for an longer title or name.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/c</IRI>
-        <Literal>The directory where the TensorFlow API C source code is located.</Literal>
+        <Literal xml:lang="en">The directory in which the TensorFlow API C source code is situated.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/cc</IRI>
-        <Literal xml:lang="en">The directory where the TensorFlow API C++ source code is located.</Literal>
+        <Literal xml:lang="en">The directory in which the TensorFlow API C++ source code is situated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>/gpuTypes</IRI>
+        <Literal>GPUs can be classified as onboard or offboard.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/java</IRI>
         <Literal>The directory where the TensorFlow API Java source code is located.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>/numberOfDevice</IRI>
+        <Literal xml:lang="en">Number of devices running tensorflow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>/numberOfDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>/numberOfLayers</IRI>
+        <Literal>Number of layers defined in configuration.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2096,6 +2286,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/stored_In</IRI>
         <Literal xml:lang="en">Object is stored in another Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>/taskPerformed</IRI>
+        <Literal xml:lang="en">Tasks for which TendorFlow is used.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
